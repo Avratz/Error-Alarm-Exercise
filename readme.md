@@ -6,12 +6,12 @@ Following the same idea to save errors in .txt the function would be something l
 
     function checkErrors () {
     	if (exists latestErrorsCount.txt) {
-        const totalErrors = errorsFile.txt.count();
-        const errorsInLastMinute = totalErrors - latestErrorsCount.txt.count();
-        if (errorsInLastMinute > 10) {
-          SendAlert();
-        }
+            const totalErrors = errorsFile.txt.count();
+            const errorsInLastMinute = totalErrors - latestErrorsCount.txt.count();
+            if (errorsInLastMinute > 10) {
+              SendAlert();
+            }
     	}
-      // replace or create file if it doesn’t exists
-    	latestErrorsCount.txt = errorsFile.txt;
+        // replace or create file if it doesn’t exists
+        latestErrorsCount.txt = errorsFile.txt;
     }
